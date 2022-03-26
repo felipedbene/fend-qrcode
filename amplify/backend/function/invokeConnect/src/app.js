@@ -16,8 +16,6 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 const AWS = require('aws-sdk');
-const util = require('util');
-
 
 
 // declare a new express app
@@ -52,20 +50,18 @@ app.use(function(req, res, next) {
 ****************************/
 
 app.post('/call', function(req, res) {
-  // Add your code here
-  
         
   
-        console.log(util.inspect(req,null));
+        console.log(req.body);
         
         //define parameter values to use in initiating the outbound call
         let maquina = req.body.maquina;
         let numeroOrigen = req.body.numeroDestino;
         let numeroDestino = req.body.numeroOrigen;
         
-        console.log(req.body.maquina);
-        console.log(req.body.numeroDestino);
-        console.log(req.body.numeroOrigen);
+        console.log(maquina);
+        console.log(numeroDestino);
+        console.log(numeroOrigen);
         console.log(`---- Starting the phone call for ${maquina} ---- `);
         
         var params = {
@@ -77,8 +73,6 @@ app.post('/call', function(req, res) {
         };
         var connect = new AWS.Connect();
         
-        console.log(`Debug params : ${params}`)
-        var data;
         // method used to initiate the outbound call from Amazon Connect
         connect.startOutboundVoiceContact(params, function(err, data) {
             if (err) console.log(err, err.stack) ;
@@ -86,7 +80,7 @@ app.post('/call', function(req, res) {
         });
         
 
-  res.json({success: 'post call succeed!', url: req.url, body: data})
+  res.json({success: 'post call succeed!', url: req.url, body: req.data})
 });
 
 // app.post('/call/*', function(req, res) {

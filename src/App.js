@@ -4,7 +4,7 @@ import React from 'react';
 import Html5QrcodePlugin from './Html5QrcodePlugin.jsx'
 import ResultContainerPlugin from './ResultContainerPlugin.jsx'
 import axios from 'axios';
-import { API } from 'aws-amplify'
+// import { API } from 'aws-amplify';
 
 
 class App extends React.Component {
@@ -58,7 +58,7 @@ class App extends React.Component {
 
     // let decodedResults = this.state.decodedResults;
     // decodedResults.push(decodedResult);
-      axios.post(`https://t6bkwpfd3f.execute-api.us-east-1.amazonaws.com/call`, decodedResult, {
+      axios.post('https://18183f3gdh.execute-api.us-east-1.amazonaws.com/dev/call/', decodedResult, {
         headers: headers
       })
       .then(res => {
