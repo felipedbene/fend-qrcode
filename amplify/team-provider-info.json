@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-html5qrcodereact-dev-164048-authRole",
+      "UnauthRoleArn": "arn:aws:iam::668984504585:role/amplify-html5qrcodereact-dev-164048-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::668984504585:role/amplify-html5qrcodereact-dev-164048-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-html5qrcodereact-dev-164048-deployment",
+      "UnauthRoleName": "amplify-html5qrcodereact-dev-164048-unauthRole",
+      "StackName": "amplify-html5qrcodereact-dev-164048",
+      "StackId": "arn:aws:cloudformation:us-east-1:668984504585:stack/amplify-html5qrcodereact-dev-164048/7ec3e230-ad23-11ec-a24a-0a74e4a93905",
+      "AmplifyAppId": "drg9odbsof3tj"
+    },
+    "categories": {
+      "function": {
+        "invokeConnect": {
+          "deploymentBucketName": "amplify-html5qrcodereact-dev-164048-deployment",
+          "s3Key": "amplify-builds/invokeConnect-452f6539514249514b36-build.zip"
+        }
+      }
+    }
+  }
+}

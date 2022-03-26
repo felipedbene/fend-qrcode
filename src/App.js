@@ -4,6 +4,8 @@ import React from 'react';
 import Html5QrcodePlugin from './Html5QrcodePlugin.jsx'
 import ResultContainerPlugin from './ResultContainerPlugin.jsx'
 import axios from 'axios';
+import { API } from 'aws-amplify'
+
 
 class App extends React.Component {
   constructor(props) {
