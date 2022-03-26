@@ -16,6 +16,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 const AWS = require('aws-sdk');
+const util = require('util');
+
+
 
 // declare a new express app
 const app = express()
@@ -51,9 +54,9 @@ app.use(function(req, res, next) {
 app.post('/call', function(req, res) {
   // Add your code here
   
+        
   
-  
-        console.log(`Printing request : ${req.body}`);
+        console.log(util.inspect(req,null));
         
         //define parameter values to use in initiating the outbound call
         let maquina = req.body.maquina;
