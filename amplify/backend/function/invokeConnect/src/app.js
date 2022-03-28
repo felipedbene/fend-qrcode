@@ -12,9 +12,9 @@ See the License for the specific language governing permissions and limitations 
 	REGION
 Amplify Params - DO NOT EDIT */
 
-const express = require('express')
-const bodyParser = require('body-parser')
-const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
+const express = require('express');
+const bodyParser = require('body-parser');
+const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
 const AWS = require('aws-sdk');
 
 
@@ -53,6 +53,7 @@ app.post('/call', function(req, res) {
         
   
         console.log(req.body);
+        console.log(req['body']);
         
         //define parameter values to use in initiating the outbound call
         let maquina = req.body.maquina;

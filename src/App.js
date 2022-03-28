@@ -57,10 +57,11 @@ class App extends React.Component {
       
 
     // let decodedResults = this.state.decodedResults;
+    // {
+    //    headers: headers
+    //  }
     // decodedResults.push(decodedResult);
-      axios.post('https://18183f3gdh.execute-api.us-east-1.amazonaws.com/dev/call/', decodedResult, {
-        headers: headers
-      })
+      axios.post('https://18183f3gdh.execute-api.us-east-1.amazonaws.com/dev/call', decodedResult )
       .then(res => {
         console.log(res);
         console.log(res.data);
