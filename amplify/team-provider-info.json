@@ -15,7 +15,7 @@
       "function": {
         "invokeConnect": {
           "deploymentBucketName": "amplify-html5qrcodereact-dev-164048-deployment",
-          "s3Key": "amplify-builds/invokeConnect-4f43394c59774f696c37-build.zip"
+          "s3Key": "amplify-builds/invokeConnect-71327649723448776b31-build.zip"
         }
       }
     }

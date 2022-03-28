@@ -53,6 +53,7 @@ app.post('/call', function(req, res) {
         
   
         console.log(req.body);
+        console.log(`Imprimiendo data ${req.data}`);
         console.log(req['body']);
         
         //define parameter values to use in initiating the outbound call

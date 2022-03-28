@@ -4,7 +4,7 @@ import React from 'react';
 import Html5QrcodePlugin from './Html5QrcodePlugin.jsx'
 import ResultContainerPlugin from './ResultContainerPlugin.jsx'
 import axios from 'axios';
-// import { API } from 'aws-amplify';
+//import { API } from 'aws-amplify';
 
 
 class App extends React.Component {
@@ -40,28 +40,10 @@ class App extends React.Component {
   onNewScanResult(decodedText, decodedResult) {
     
     console.log(
-      "App [result]", decodedResult);
-      
-      const headers = {
-            "Content-Type" : "application/json",
-            "Access-Control-Allow-Headers" : "Content-Type",
-            "Access-Control-Allow-Methods" : "*",
-            "Access-Control-Allow-Credentials" : true,
-            "Access-Control-Allow-Origin" : "*",
-            "X-Requested-With" : "*"
-            
-            // ,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,Access-Control-Allow-Headers,access-control-allow-methods",
-            
-      }
-      
+      "App [result]", decodedText);
       
 
-    // let decodedResults = this.state.decodedResults;
-    // {
-    //    headers: headers
-    //  }
-    // decodedResults.push(decodedResult);
-      axios.post('https://18183f3gdh.execute-api.us-east-1.amazonaws.com/dev/call', decodedResult )
+      axios.post('https://b9vjj9ljq0.execute-api.us-east-1.amazonaws.com/Prod/call', decodedText )
       .then(res => {
         console.log(res);
         console.log(res.data);
