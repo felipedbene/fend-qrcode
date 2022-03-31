@@ -1,6 +1,0 @@
-[
-  {
-    "Action": ["connect:StartOutboundVoiceContact"],
-    "Resource": ["*"]
-  }
-]
