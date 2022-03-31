@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/call": {
+      "name": "/call",
+      "lambdaFunction": "invokeConnect",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
