@@ -43,11 +43,12 @@ class App extends React.Component {
       
       
     let datos = {
-     "input": decodedResult,
+     "input": decodedText,
      "name": uuidv4(),
      "stateMachineArn": "arn:aws:states:us-east-1:668984504585:stateMachine:MyStateMachine"
-    }
+    };
     
+    console.log(datos);
       axios.post(`https://yhicdu4li8.execute-api.us-east-1.amazonaws.com/Prod/execution`, datos)
       .then(res => {
         console.log(res);
