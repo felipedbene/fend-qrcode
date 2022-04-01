@@ -38,7 +38,12 @@ class App extends React.Component {
 
   onNewScanResult(decodedText, decodedResult) {
     
-    console.log(
+
+      
+    this.setState((state, props) => {
+      
+      state.decodedResults.push(decodedResult);
+      console.log(
       "App [result]", decodedResult);
       
       
@@ -55,9 +60,8 @@ class App extends React.Component {
         console.log(res.data);
       })
       
-    this.setState((state, props) => {
-      state.decodedResults.push(decodedResult);
       return state;
+      
     });
   }
 }
