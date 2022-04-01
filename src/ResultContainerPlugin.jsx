@@ -22,7 +22,7 @@ class ResultContainerTable extends React.Component {
     render() {
         var results = filterResults(this.props.data);
         
-    if (results.length > 1){
+    if (results.length > 0){
             console.log(results[results.length - 1]);
                 
             let datos = {
