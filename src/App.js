@@ -41,27 +41,7 @@ class App extends React.Component {
     console.log(
       "App [result]", decodedResult);
       
-      const headers = {
-            "Content-Type" : "application/json",
-            "Access-Control-Allow-Headers" : "Content-Type",
-            "Access-Control-Allow-Methods" : "*",
-            "Access-Control-Allow-Credentials" : true,
-            "Access-Control-Allow-Origin" : "*",
-            "X-Requested-With" : "*"
-            
-            // ,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,Access-Control-Allow-Headers,access-control-allow-methods",
-            
-      }
       
-      
-
-    // let decodedResults = this.state.decodedResults;
-    // decodedResults.push(decodedResult);
-    //  {
-    //    headers: headers
-    //  }
-    // Didosasfdasfas
-    
     let datos = {
      "input": decodedResult,
      "name": uuidv4(),
