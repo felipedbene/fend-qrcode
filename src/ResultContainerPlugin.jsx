@@ -1,4 +1,7 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
+
 
 function filterResults(results) {
     let filteredResults = [];
@@ -18,6 +21,23 @@ function filterResults(results) {
 class ResultContainerTable extends React.Component {
     render() {
         var results = filterResults(this.props.data);
+        console.log(results[results.length - 1]);
+        
+    let datos = {
+     "input": results[results.length-1].decodedText,
+     "name": uuidv4(),
+     "stateMachineArn": "arn:aws:states:us-east-1:668984504585:stateMachine:MyStateMachine"
+    };
+    
+    console.log(datos);
+      axios.post(`https://yhicdu4li8.execute-api.us-east-1.amazonaws.com/Prod/execution`, datos)
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+        
+        
+        
         return (
             <table className={'Qrcode-result-table'}>
                 <thead>
