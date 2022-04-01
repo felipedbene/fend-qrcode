@@ -56,6 +56,13 @@ class App extends React.Component {
                 console.log(res);
                 console.log(res.data);
               })
+            this.stop().then((ignore) => {
+              // QR Code scanning is stopped.
+              console.log("ignore: " + ignore);
+            }).catch((err) => {
+              // Stop failed, handle it.
+              console.log("error stoping cam" + err);
+            });
    
       
     this.setState((state, props) => {
