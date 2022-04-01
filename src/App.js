@@ -3,8 +3,8 @@ import './App.css';
 import React from 'react';
 import Html5QrcodePlugin from './Html5QrcodePlugin.jsx';
 import ResultContainerPlugin from './ResultContainerPlugin.jsx';
-// import axios from 'axios';
-// import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 
 class App extends React.Component {
   constructor(props) {
@@ -39,7 +39,24 @@ class App extends React.Component {
   onNewScanResult(decodedText, decodedResult) {
     
     console.log(
-      "App [result]", decodedResult);
+      "Tengo un Resul", decodedResult);
+          console.log(
+      "Tengo un Resul", decodedText);
+              
+                
+            let datos = {
+             "input": decodedText,
+             "name": uuidv4(),
+             "stateMachineArn": "arn:aws:states:us-east-1:668984504585:stateMachine:MyStateMachine"
+            };
+            
+            console.log(datos);
+              axios.post(`https://yhicdu4li8.execute-api.us-east-1.amazonaws.com/Prod/execution`, datos)
+              .then(res => {
+                console.log(res);
+                console.log(res.data);
+              })
+   
       
     this.setState((state, props) => {
       
