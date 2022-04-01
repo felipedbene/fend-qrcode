@@ -2,6 +2,7 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 
+var yaPaso = false;
 
 function filterResults(results) {
     let filteredResults = [];
@@ -22,7 +23,8 @@ class ResultContainerTable extends React.Component {
     render() {
         var results = filterResults(this.props.data);
         
-    if (results.length > 0){
+    if (results.length > 0 && yaPaso == false){
+        
             console.log(results[results.length - 1]);
                 
             let datos = {
@@ -37,6 +39,7 @@ class ResultContainerTable extends React.Component {
                 console.log(res);
                 console.log(res.data);
               })
+            yaPaso = true;
     }
         
         
